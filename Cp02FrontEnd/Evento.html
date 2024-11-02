@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bola de Ouro</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Bem Vindo ao Evento Bola de Ouro</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Premiações</a></li>
+                    <li><a href="#">Nossa Historia</a></li>
+                    <li><a href="#" class="btn">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+        <main>
+            <section class="banner">
+                <div>
+                    <h2>Venha conhecer o maior evento do mundo futebolistico</h2>
+                    <p>Escolhas dos Melhores Jogadores do Mundo</p>
+                    <a href="#" class="btn">Reserve seu Lugar!</a>
+                </div>
+            </section>
+            <section class="Premiações">
+                <div class="container">
+                    <h2>Jogadores Premiados</h2>
+
+                    <div class="card-grid">
+                        <div id="card-01" class="card">
+                            <img src="img/Img01.jpg" alt="Imagem do Evento 1" />
+                            <div class="card-content">
+                                <h3>Evento Bola de Ouro</h3>
+                                <p>
+                                    O unico evento que premia o melhor jogador de Futebol do Mundo!!!
+                                </p>
+                            </div>
+                        </div>
+
+                        <div id="card-02" class="card">
+                            <img src="img/Img02.jpg" alt="Imagem do Evento 2" />
+                            <div class="card-content">
+                                <h3>Evento Bola de Ouro</h3>
+                                <p>
+                                    Sinta o prazer de saber quem são os Melhores deste mundo...
+                                </p>
+                            </div>
+                        </div>
+
+                        <div id="card-03" class="card">
+                            <img src="img/Img03.jpg" alt="Imagem do Evento 3" />
+                            <div class="card-content">
+                                <h3>Evento Bola de Ouro</h3>
+                                <p>
+                                    Aqui só Encontra os Melhores...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Rodapé -->
+        <footer>
+            <div>
+                <p>2024 - Bola de Ouro FIFA. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+
+        <!-- Modal para formulário de contato -->
+        <div id="contatoModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">x</span>
+                <h2>Entre em contato</h2>
+                <form>
+                    <label for="inputName">Nome:</label>
+                    <input type="text" id="inputName" name="name" required />
+
+                    <label for="inputEmail">Email:</label>
+                    <input type="email" id="inputEmail" name="email" required />
+
+                    <label for="inputTelefone">Telefone:</label>
+                    <input type="tel" id="inputTelefone" name="telefone" required />
+
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            window.onload = function () {
+                var modal = document.getElementById('contatoModal');
+                modal.style.display = 'block';
+
+                document.querySelector('.close-btn').onclick = function () {
+                    modal.style.display = 'none';
+                }
+            }
+        </script>
+    </header>
+
+</body>
+
+</html>
