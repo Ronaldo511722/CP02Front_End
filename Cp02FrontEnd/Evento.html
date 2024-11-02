@@ -1,83 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <title>Bola de Ouro</title>
     <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
     <header>
-        <div>
-            <h1>Bem Vindo ao Evento Bola de Ouro</h1>
+        <div class="container">
+            <h1>Bem-vindo ao Evento Bola de Ouro</h1>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Início</a></li>
                     <li><a href="#">Premiações</a></li>
-                    <li><a href="#">Nossa Historia</a></li>
-                    <li><a href="#" class="btn">Contato</a></li>
+                    <li><a href="#">Nossa História</a></li>
+                    <li><a href="#contatoModal" class="btn">Contato</a></li>
                 </ul>
             </nav>
         </div>
-        <main>
-            <section class="banner">
-                <div>
-                    <h2>Venha conhecer o maior evento do mundo futebolistico</h2>
-                    <p>Escolhas dos Melhores Jogadores do Mundo</p>
-                    <a href="#" class="btn">Reserve seu Lugar!</a>
-                </div>
-            </section>
-            <section class="Premiações">
-                <div class="container">
-                    <h2>Jogadores Premiados</h2>
+    </header>
 
-                    <div class="card-grid">
-                        <div id="card-01" class="card">
-                            <img src="img/Img01.jpg" alt="Imagem do Evento 1" />
-                            <div class="card-content">
-                                <h3>Evento Bola de Ouro</h3>
-                                <p>
-                                    O unico evento que premia o melhor jogador de Futebol do Mundo!!!
-                                </p>
-                            </div>
+    <main>
+        <section class="banner">
+            <div>
+                <h2>Venha conhecer o maior evento de futebol do mundo.</h2>
+                <p>Escolha dos Melhores Jogadores do Mundo</p>
+                <a href="#" class="btn">Reserve seu Lugar!</a>
+            </div>
+        </section>
+
+        <section class="O Mundo do Futebol">
+            <div class="container">
+                <h2>Só os Melhores Chega até aqui!!!</h2>
+                <p>O evento Bola de Ouro celebra os melhores jogadores de futebol do mundo, premiando os que mais se destacaram na temporada. Não perca a chance de ver seus ídolos do futebol de perto!</p>
+            </div>
+        </section>
+
+        <section class="Cards">
+            <div class="container">
+                <h2>Evento Bola de Ouro</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <img src="img/Img01.jpg" alt="Evento 1" class="card-image" />
+                        <div class="card-content">
+                            <h3>Evento Abertura</h3>
+                            <p>A festa começa agora.</p>
                         </div>
-
-                        <div id="card-02" class="card">
-                            <img src="img/Img02.jpg" alt="Imagem do Evento 2" />
-                            <div class="card-content">
-                                <h3>Evento Bola de Ouro</h3>
-                                <p>
-                                    Sinta o prazer de saber quem são os Melhores deste mundo...
-                                </p>
-                            </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/Img02.jpg" alt="Evento 2" class="card-image" />
+                        <div class="card-content">
+                            <h3>Premiações</h3>
+                            <p>chegou a hora de saber quem é o melhor</p>
                         </div>
-
-                        <div id="card-03" class="card">
-                            <img src="img/Img03.jpg" alt="Imagem do Evento 3" />
-                            <div class="card-content">
-                                <h3>Evento Bola de Ouro</h3>
-                                <p>
-                                    Aqui só Encontra os Melhores...
-                                </p>
-                            </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/Img03.jpg" alt="Evento 3" class="card-image" />
+                        <div class="card-content">
+                            <h3>O Melhor do Mundo</h3>
+                            <p>O Rei do Mundo do futebol.</p>
                         </div>
                     </div>
                 </div>
-            </section>
-        </main>
-        <!-- Rodapé -->
-        <footer>
-            <div>
-                <p>2024 - Bola de Ouro FIFA. Todos os direitos reservados.</p>
             </div>
-        </footer>
+        </section>
 
-        <!-- Modal para formulário de contato -->
-        <div id="contatoModal" class="modal">
-            <div class="modal-content">
-                <span class="close-btn">x</span>
-                <h2>Entre em contato</h2>
+        <section class="agenda">
+            <div class="container">
+                <h2>Agenda do Evento</h2>
+                <ul>
+                    <li>10:00 - Abertura do Evento</li>
+                    <li>11:00 - Recebimento dos Jogadores</li>
+                    <li>12:00 - Recebimento dos convidados</li>
+                    <li>13:00 - Votações</li>
+                    <li>14:00 - Premiações</li>
+                    <li>15:00 - Encerramento</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="formulario-participacao">
+            <div class="container">
+                <h2>Formulário de Participação no Evento</h2>
                 <form>
                     <label for="inputName">Nome:</label>
                     <input type="text" id="inputName" name="name" required />
@@ -91,20 +95,39 @@
                     <button type="submit" class="btn">Enviar</button>
                 </form>
             </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>2024 - Bola de Ouro FIFA. Todos os direitos reservados.</p>
         </div>
+    </footer>
 
-        <script>
-            window.onload = function () {
-                var modal = document.getElementById('contatoModal');
-                modal.style.display = 'block';
+    <div id="contatoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Contato</h2>
+            <form>
+                <label for="nomeContato">Nome:</label>
+                <input type="text" id="nomeContato" name="nomeContato" required />
 
-                document.querySelector('.close-btn').onclick = function () {
-                    modal.style.display = 'none';
-                }
-            }
-        </script>
-    </header>
+                <label for="emailContato">Email:</label>
+                <input type="email" id="emailContato" name="emailContato" required />
 
+                <label for="mensagemContato">Mensagem:</label>
+                <textarea id="mensagemContato" name="mensagemContato" required></textarea>
+
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.close-btn').onclick = function () {
+            document.getElementById('contatoModal').style.display = 'none';
+        }
+    </script>
 </body>
-
 </html>

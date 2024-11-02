@@ -1,4 +1,4 @@
-/* Reseta as margens e paddings */
+/* Reseta as margens e paddings para que todos os elementos comecem sem espaçamentos padrão */
 * {
     margin: 0;
     padding: 0;
@@ -7,213 +7,179 @@
 
 /* Estilo do corpo da página */
 body {
-    background-color: bisque;
+    background-color: #f9f9f9; /* Fundo claro para um visual limpo */
     font-family: Arial, Helvetica, sans-serif;
-    color: #333;
+    color: #333; /* Cor do texto principal */
 }
 
-/* Estilo do container */
+/* Container para centralizar e limitar a largura do conteúdo */
 .container {
-    width: 100%;
-    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+    width: 90%; /* Largura ajustável para telas menores */
+    max-width: 1200px; /* Largura máxima em telas grandes */
+    margin: 0 auto;
 }
 
-/* Estilo do cabeçalho */
+/* Cabeçalho da página */
 header {
-    background-color: #333;
+    background-color: #1c1c1c; /* Fundo escuro para contraste */
     color: white;
-    padding: 20px;
+    padding: 20px 0;
+    text-align: center;
 }
 
 header h1 {
-    text-align: center;
-    font-size: 36px;
+    font-size: 2.5rem; /* Tamanho maior para destacar o título */
 }
 
+/* Navegação do cabeçalho */
 header nav ul {
-    display: flex;
+    display: flex; /* Flexbox para alinhamento horizontal dos itens */
     justify-content: center;
-    list-style: none;
-    padding: 15px;
+    gap: 20px; /* Espaço entre os itens */
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 10px 0;
 }
 
-header nav li {
-    margin: 15px;
-}
-
-header nav ul li a {
+header nav a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1rem;
+    padding: 10px;
 }
 
-header nav li a:hover {
-    text-decoration: underline;
-    color: bisque;
+header nav a:hover {
+    color: #ff6347; /* Cor de destaque ao passar o mouse */
 }
 
-/* Estilo do banner */
+/* Seção do banner principal */
 .banner {
-    background: url('../img/Vini_Ballon\ d\'Or\ 2024\ winner\ arguments.jpg.webp') no-repeat center center/cover;
-    height: 400px;
+    background: url('../img/banner-bola-de-ouro-v2.jpg') no-repeat center center/cover; /* Imagem de fundo centralizada e coberta */
+    height: 450px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    color: rgb(26, 25, 25);
     text-align: center;
+    padding: 0 20px;
 }
 
 .banner h2 {
-    font-size: 48px;
-    margin: 20px;
-    color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para maior contraste no texto */
 }
 
 .banner p {
-    font-size: 20px;
-    margin: 20px;
-    color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-size: 1.2rem;
+    margin: 20px 0;
 }
 
-.banner a {
-    color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
+/* Botão do banner */
 .banner .btn {
-    background-color: #ff6347;
+    background-color: #e01010;
     color: white;
-    padding: 20px;
-    text-decoration: none;
-    font-size: 18px;
+    padding: 15px 30px;
     border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 20px;
 }
 
 .banner .btn:hover {
-    background-color: #e5533d;
+    background-color: #723de5; /* Cor de hover para o botão */
 }
 
-/* Estilo da seção*/
-.Premiações {
-    background-color: bisque;
-}
-
-.Jogadores h2 {
-    text-align: center;
-    font-size: 36px;
-}
-
-/* Grade dos cards */
+/* Grade para exibir cards */
 .card-grid {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grade responsiva */
+    gap: 20px; /* Espaço entre os cards */
+    margin: 40px 0;
 }
 
-/* Estilo dos cards */
+/* Estilo individual dos cards */
 .card {
-    background-color: bisque;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 100px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease; /* Transição suave */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    overflow: hidden;
+    transition: transform 0.2s;
 }
 
 .card:hover {
-    transform: scale(1.1); /* Efeito hover para aumentar o tamanho do card */
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
 }
 
-.card img {
+/* Imagem dentro do card */
+.card-image {
     width: 100%;
-    height: 400px;
-    object-fit: cover;
+    height: 200px;
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorções */
 }
 
+/* Conteúdo do card */
 .card-content {
-    padding: 50px;
+    padding: 20px;
 }
 
 .card h3 {
-    font-size: 24px;
-    margin: 10px;
+    font-size: 1.5rem;
     color: #333;
 }
 
 .card p {
-    font-size: 16px;
-    color: #666;
+    color: #555;
 }
 
-/* Estilo do rodapé */
+/* Rodapé da página */
 footer {
-    background-color: #333;
+    background-color: #1c1c1c;
     color: white;
     padding: 20px;
     text-align: center;
-    margin-top: 50px;
 }
 
-footer p {
-    font-size: 16px;
-}
-
-/* Estilo do modal */
+/* Modal de contato */
 .modal {
     display: none;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(3, 3, 3, 0.7);
     position: fixed;
     z-index: 1;
+    left: 0;
     top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semi-transparente */
 }
 
+/* Conteúdo do modal */
+.modal-content {
+    background-color: #f9f9f9;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+}
+
+/* Botão para fechar o modal */
 .close-btn {
-    color: #333;
     float: right;
-    font-size: 28px;
+    font-size: 1.5rem;
+    color: #333;
     cursor: pointer;
 }
 
 .close-btn:hover {
-    color: rgb(15, 15, 194);
+    color: #5c47ff;
 }
 
-.modal-content {
-    background-color: bisque;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 400px;
-}
-
-.modal form {
-    display: flex;
-    flex-direction: column;
-}
-
-.modal form label {
-    margin: 10px;
-    font-size: 16px;
-}
-
-.modal form input {
-    padding: 10px;
-    margin: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.modal form .btn {
-    background-color: #ff6347;
+/* Estilo geral dos botões */
+.btn {
+    background-color: #121211;
     color: white;
-    border: none;
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.modal form .btn:hover {
-    background-color: #e5533d;
+.btn:hover {
+    background-color: #593de5;
 }
